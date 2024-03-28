@@ -1,0 +1,441 @@
+.bmi-section {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.bmi-container {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1050px;
+    gap: 30px;
+}
+
+.bmi-content {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.bmi-title {
+    color: #35569e;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+.bmi-text {
+    width: 400px;
+    margin-bottom: 30px;
+    color: #666;
+    font-size: 1em;
+}
+
+.bmi-form {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.bmi-form input,
+.bmi-form p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.bmi-form input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 30px;
+    color: black;
+}
+
+.bmi-image {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.bmi-image img {
+    width: 80%;
+    max-width: 400px;
+    
+}
+
+
+.bmi-image-container {
+    position: relative;
+    width: 100%;
+
+}
+
+.bmi-arrow {
+    position: absolute;
+    top: 100%;
+    /* Görselin altında yer alacak */
+    left: 50%;
+    /* Başlangıçta ortada */
+    transform: translateX(-50%) rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background-color: red;
+}
+
+.trainers-section {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 40px;
+    background-color: rgba(241, 248, 255, 255);
+    position: relative;
+}
+
+.trainers-section h2 {
+    margin: 30px;
+    font-size: 2.2em;
+    color: #35569e;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+}
+
+.trainers-section h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 5px;
+    background-color: orange;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* yatay olarak ortaladık */
+    bottom: -20px;
+    border-radius: 5px;
+    
+}
+
+
+.trainers {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.trainer-card {
+    width: 300px; 
+    text-align: center; 
+    transition: transform 0.3s ease; 
+    position: relative; 
+    background-color: #ffffff; 
+    border-radius: 17px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 20px; 
+    margin-top: 20px;
+    z-index: 1;
+}
+
+.horizontal-bar {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  width: 105%;
+  height: 100px;
+  transform: translate(-50%, -50%);
+  background-color: #355592;
+  transition: 0.5 all linear;
+  z-index: -1;
+}
+
+.trainer-card:hover .horizontal-bar{
+    height: 180px;
+}
+
+.vertical-bar {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 105%;
+  transform: translate(-50%, -50%);
+  background-color: #355592;
+  transition: 0.5 all linear;
+  z-index: -1;
+}
+
+.trainer-card img {
+    width: 100%; 
+    border-top-left-radius: 15px; 
+    border-top-right-radius: 15px; 
+    z-index: 2; 
+}
+
+.trainer-name {
+    position: absolute;
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); /* Kendi genişliğinin yarısı kadar sola kaydır */
+    background-color: #355592;
+    color: white;
+    padding: 30px;
+    visibility: hidden; /* Başlangıçta gizli */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: calc(100% - 20px); 
+    box-sizing: border-box; 
+    border-radius: 30%;
+
+}
+
+.trainer-card:hover .trainer-name{
+    visibility: visible;
+}
+
+
+
+
+/* Sol üst köşe süslemesi */
+.trainer-card::before {
+    left: 0;
+    border-top-left-radius: 10px; 
+}
+
+/* Sağ üst köşe süslemesi */
+.trainer-card::after {
+    right: 0;
+    border-top-right-radius: 10px; 
+}
+
+.trainer-card:hover {
+    transform: scale(1.05);
+}
+
+.purchase-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #f8f8f8;
+}
+
+.purchase-container {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.purchase-section h2 {
+    font-size: 2.2em;
+    color: #35569e; /* Başlık rengini düzenleyin */
+    margin-bottom: 70px; /* Başlık ve ürün kartları arasındaki mesafe */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.purchase-section h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 5px;
+    background-color: orange;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* yatay olarak ortaladık */
+    bottom: -20px;
+    border-radius: 5px;
+    
+}
+
+.purchase-text {
+    margin-bottom: 50px; 
+    color: #333; 
+    width: 550px;
+    text-align: center;
+}
+
+.product-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    flex-wrap: wrap; 
+}
+
+.product-card {
+    width: 250px; 
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+}
+
+.product-card img {
+    width: 100%; 
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.product-card h3 {
+    margin-bottom: 10px;
+    color: #22282c;
+}
+
+.product-card .price-original {
+    text-decoration: line-through; /* Fiyatın üstünü çizer */
+    color: black; /* Üstü çizili fiyat için gri renk */
+    margin-right: 10px; /* İndirimli fiyat ile arasında boşluk */
+}
+
+/* İndirimli Fiyat */
+.product-card .price-sale {
+    color: black; 
+    font-weight: bold; 
+}
+
+
+.product-card button {
+    color: black;
+    padding: 5px 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.product-card button:hover {
+    background-color: #717476;
+}
+
+
+.emoji {
+    margin-right: 20px;
+}
+
+
+@media (max-width: 576px) {
+    .bmi-section {
+        padding: 20px;
+    }
+
+    .bmi-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .bmi-content, .bmi-image {
+        text-align: center;
+        width: 100%;
+    }
+
+    .bmi-title, .bmi-text {
+        text-align: center;
+    }
+
+    .bmi-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .bmi-form input[type="number"], 
+    .bmi-form p {
+        width: calc(100% - 30px); /* input genişliğini ayarla, padding düşünülerek */
+        margin: 5px 0; 
+        text-align: center; 
+    }
+
+    .bmi-image {
+        display: flex;
+        justify-content: center; 
+        width: 120%; 
+    }
+
+    .bmi-image img {
+        max-width: 100%; 
+        height: auto; 
+    }
+    .bmi-arrow {
+        left: calc(50% - 50px); /* Ekran daraldıkça arrow'u sola veya sağa doğru hafifçe kaydır */
+    }
+    .trainers-section {
+        padding: 20px; 
+    }
+
+    .trainers-section h2 {
+        margin-bottom: 40px; 
+    }
+
+    .trainers-section p {
+        width: 100%; 
+        margin-bottom: 20px; 
+        text-align: center;
+    }
+
+    .trainers {
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        align-items: center;
+        justify-content: center;
+        gap: 20px; 
+    }
+
+    .trainer-card {
+        width: 80%; 
+        margin: 5px; 
+    }
+
+    .purchase-section {
+        padding: 20px;
+    }
+
+    .purchase-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .purchase-text {
+        width: 100%; 
+        margin-bottom: 30px; 
+    }
+
+    .product-cards {
+        justify-content: center; /* Kartları merkeze hizala */
+        gap: 10px; /* Kartlar arasındaki boşluğu azalt */
+    }
+
+    .product-card {
+        width: 80%; 
+        padding: 10px; 
+    }
+
+    .product-card img {
+        margin-bottom: 15px; 
+    }
+
+    .product-card .price-original,
+    .product-card .price-sale {
+        font-size: smaller; 
+    }
+
+    .product-card button {
+        padding: 10px 15px; 
+        font-size: smaller; 
+    }
+
+
+
+}
