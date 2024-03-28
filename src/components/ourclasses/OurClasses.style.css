@@ -1,0 +1,186 @@
+.classes {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    margin: 0 auto; 
+  }
+
+  .classes::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #f6f6f6;
+    clip-path: polygon(24% 0, 100% 0, 100% 100%, 50% 100%);
+    z-index: -1;
+  }
+
+
+.classes-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.classes-top p {
+    width: 500px;
+    text-align: center;
+}
+
+
+
+.classes-button button {
+    background-color: #355592; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; /* İmleç işaretçisini belirler */
+    transition: background-color 0.3s ease; 
+}
+
+
+.classes-button button:hover {
+    background-color: #0056b3; /* Butonun üzerine gelindiğinde koyu mavi */
+}
+
+.classes-button {
+    display: flex;
+    justify-content: center; 
+    gap: 120px; 
+}
+
+.classes-bottom div, .classes-img img {
+    flex: 1; 
+    max-width: 50%; 
+    margin: 5px;
+    padding: 5px;
+}
+
+.classes-img {
+    width: 100%;
+}
+
+.classes-img img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+
+.classes-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    gap: 20px;
+    flex-wrap: wrap; 
+  }
+
+.classes-bottom div {
+    margin: 5px;
+    padding: 5px;
+}
+
+.classes-bottom p {
+    width: 500px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.classes-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.classes-text-top h2 {
+    text-align: center; 
+    width: 100%; 
+  }
+
+.classes-text-top p {
+    width: 300px;
+}
+
+.classes-text-bottom p {
+    width: 300px;
+}
+
+.classes-text, .classes-img {
+    flex: 1; 
+  }
+
+  .classes-img img {
+    max-width: 90%;
+    height: auto;
+    display: block; 
+  }
+
+
+
+.text-title {
+    font-size: 2.2em;
+    margin: 30px;
+    color: #35569e;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+}
+
+
+.text-title::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 5px;
+    background-color: orange;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* yatay olarak ortaladık */
+    bottom: -20px;
+    border-radius: 5px;
+    
+}
+
+.black-bold {
+    color: rgb(39, 36, 36);
+    font-weight: bold;
+}
+
+@media (max-width: 576px) {
+    .classes-top p, .classes-text-top p, .classes-text-bottom p {
+      width: 100%; 
+      padding: 0 15px; 
+    }
+
+    .classes-text-top h2 {
+        text-align: center; 
+      }
+
+      .classes-text-bottom h2 {
+        text-align: center; 
+      }
+  
+    .classes-button {
+      flex-direction: column; 
+      gap: 10px; 
+    }
+  
+    .classes-bottom {
+      flex-direction: column; 
+    }
+  
+    .classes-bottom div, .classes-img img {
+      max-width: 100%; 
+    }
+  }
