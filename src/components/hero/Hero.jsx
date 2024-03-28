@@ -29,6 +29,24 @@ const Hero = () => {
             </div>
         </div>
     </section>
+    <section class="info">
+        <div class="info-box">
+            <div class="bold">325</div>
+            <div class="black">Course</div>
+        </div>
+        <div class="info-box">
+            <div class="bold">405</div>
+            <div class="black">Workout</div>
+        </div>
+        <div class="info-box">
+            <div class="bold">305</div>
+            <div class="black">Working Hour</div>
+        </div>
+        <div class="info-box">
+            <div class="bold">705</div>
+            <div class="black">Happy Client</div>
+        </div>
+    </section>
       
     </div>
   )
