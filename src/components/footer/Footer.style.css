@@ -1,0 +1,81 @@
+.footer {
+    background-color: #355592; 
+    color: #ffffff;
+    padding: 40px 20px; /* Yukarı aşağı padding ve sağ sol için bir miktar boşluk */
+    font-family: 'Arial', sans-serif;
+    text-align: center; /* Tüm metinleri ortalar */
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.footer-logo {
+    align-self: flex-start;
+    margin-bottom: 20px; 
+}
+
+.footer-description {
+    margin-bottom: 50px; /* Açıklama metninden sonra boşluk */
+    text-align: center;
+    color: white;
+
+}
+
+.footer-links-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.footer-column {
+    text-align: left;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 10px 0; /* List öğeleri arasında boşluk */
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #FFA500; 
+}
+
+@media (max-width: 576px) {
+    .footer-container {
+        align-items: center; 
+    }
+
+    .footer-logo {
+        align-self: center; 
+    }
+
+    .footer-links-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .footer-column {
+        margin-bottom: 20px; /* Sütunlar arasında boşluk */
+    }
+
+    .footer-links li {
+        text-align: center; /* Linkleri merkeze al */
+    }
+}
