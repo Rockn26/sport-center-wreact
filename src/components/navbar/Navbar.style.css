@@ -1,0 +1,91 @@
+.header {
+    display: flex;
+    justify-content: center;
+    position: fixed; /* Navbar'ı sabitle */
+    top: 0; /* Sayfanın en üstünde */
+    width: 100%;
+    background-color: transparent; /* İstenen arka plan rengi */
+    z-index: 999; /* Diğer öğelerin üstünde görünmesini sağla */
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Hafif bir gölge ekle */
+}
+
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 67%;
+    margin: 0 auto;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-right a, .nav-right button {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.nav-right button {
+    background-color: #FFA500;
+    border:none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer; /* üzerine gelince el işareti çıkacak */
+}
+
+.nav-right a:hover, .nav-right button:hover{ 
+    color: #FFA500;
+    background-color: transparent;
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        flex-wrap: wrap; /* İçerik çoksa yeni satıra geç */
+    }
+
+    .nav-right {
+        display: none;
+        flex-direction: column;
+        width: 100%; /* Tam genişlik kullan */
+        justify-content: center; /* İçerikleri ortala */
+    }
+
+    .nav-right a, .nav-right button {
+        padding: 5px 10px; /* Buton ve linklerin padding'ini küçült */
+    }
+
+    .nav-right.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block; 
+        cursor: pointer;
+        border: none; 
+        background: none; 
+        padding: 0; 
+    }
+    
+    .hamburger span {
+        display: block; /* Blok elementi olarak ayarla */
+        width: 25px; 
+        height: 3px; 
+        background-color: #ffffff; 
+        margin: 5px 0; 
+        transition: all 0.3s ease; 
+    }
+
+    .hamburger, .hamburger:active, .hamburger:focus {
+        background-color: transparent; 
+        outline: none; 
+    }
+}
